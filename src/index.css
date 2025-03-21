@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap');
+
+.font-arabic {
+  font-family: 'Amiri', serif;
+}
+
+.crescent {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 0 #ffd700;
+  transform: rotate(-45deg);
+}
+
+.crescent-small {
+  width: 30px;
+  height: 30px;
+  box-shadow: 8px 8px 0 0 #ffd700;
+}
+
+.stars {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #ffd700;
+  border-radius: 50%;
+  box-shadow: 
+    15px 15px #ffd700,
+    25px 35px #ffd700,
+    35px 15px #ffd700,
+    45px 25px #ffd700,
+    65px 35px #ffd700,
+    85px 15px #ffd700,
+    100px 25px #ffd700;
+  animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ramadan-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.1) 0px,
+    rgba(255, 215, 0, 0.1) 20px,
+    transparent 20px,
+    transparent 40px
+  );
+}
+
+.arabic-title {
+  font-family: 'Noto Naskh Arabic', serif;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
